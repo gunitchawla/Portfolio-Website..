@@ -6,27 +6,27 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 const Projects = () => {
   const projects = [
     {
-      title: 'AI Image Generator',
-      description: 'A web application that generates images based on text descriptions using OpenAI APIs.',
-      tags: ['OpenAI API', 'HTML', 'CSS'],
+      title: 'Custom Chat GPT',
+      description: 'A personalized ChatGPT implementation with custom knowledge base and specialized responses for specific domains.',
+      tags: ['OpenAI API', 'React', 'Node.js'],
       image: 'bg-gradient-to-br from-purple-dark/40 to-purple/20'
     },
     {
-      title: 'Data Structure Visualizer',
-      description: 'Interactive visualization of common data structures and algorithms implemented in C++.',
-      tags: ['C++', 'Data Structures', 'Algorithms'],
+      title: 'Custom Recipe Generator',
+      description: 'AI-powered application that generates personalized recipes based on available ingredients, dietary restrictions, and preferences.',
+      tags: ['OpenAI API', 'Python', 'Flask'],
       image: 'bg-gradient-to-br from-purple/20 to-accent/20'
     },
     {
-      title: 'Portfolio Website',
-      description: 'A responsive personal portfolio website built with modern web technologies.',
-      tags: ['HTML', 'CSS', 'Responsive Design'],
+      title: 'DALL-E Image Generation',
+      description: 'Web application that utilizes DALL-E to generate unique images from textual descriptions with customizable parameters.',
+      tags: ['DALL-E API', 'JavaScript', 'HTML/CSS'],
       image: 'bg-gradient-to-br from-accent/20 to-purple-dark/40'
     },
     {
-      title: 'AI Chat Assistant',
-      description: 'A conversational AI assistant that can answer questions and provide information.',
-      tags: ['Python', 'OpenAI API', 'AI'],
+      title: 'Telegram Image Bot with OpenAI',
+      description: 'A Telegram bot that generates and sends AI-created images based on user prompts using OpenAI\'s image generation capabilities.',
+      tags: ['Telegram API', 'OpenAI API', 'Python'],
       image: 'bg-gradient-to-br from-accent/30 to-purple/20'
     }
   ];
@@ -38,7 +38,7 @@ const Projects = () => {
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">My Projects</h2>
           <div className="h-1 w-20 bg-gradient-to-r from-purple-light to-accent rounded-full mx-auto mb-6"></div>
           <p className="text-foreground/80 max-w-2xl mx-auto">
-            Here are some of the projects I've worked on
+            Here are some of the AI-powered projects I've developed
           </p>
         </div>
         
