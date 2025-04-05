@@ -4,36 +4,36 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-16">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-dark/20 rounded-full blur-3xl -z-10 animate-pulse-glow"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-dark/20 rounded-full blur-3xl -z-10"></div>
+    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-16 bg-black">
+      {/* Code-like decorations */}
+      <div className="absolute top-20 left-20 code-style opacity-30">{'<html>'}</div>
+      <div className="absolute top-32 left-28 code-style opacity-30">{'<body>'}</div>
+      <div className="absolute bottom-32 left-28 code-style opacity-30">{'</body>'}</div>
+      <div className="absolute bottom-20 left-20 code-style opacity-30">{'</html>'}</div>
       
-      <div className="container mx-auto px-4 py-20 flex flex-col items-center text-center">
-        <p className="text-lg md:text-xl text-primary mb-6 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-          Hello, I'm
-        </p>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 gradient-text tracking-tight animate-slide-up" style={{ animationDelay: '0.4s' }}>
-          Gunit Chawla
-        </h1>
-        <div className="h-1 w-20 bg-gradient-to-r from-purple-light to-accent rounded-full my-8 animate-slide-up" style={{ animationDelay: '0.6s' }}></div>
-        <p className="text-xl md:text-2xl text-foreground/80 max-w-2xl mx-auto mb-10 animate-slide-up" style={{ animationDelay: '0.8s' }}>
-          Developer & AI Enthusiast
-        </p>
-        
-        <div className="flex flex-wrap gap-4 justify-center animate-slide-up" style={{ animationDelay: '1s' }}>
-          <a 
-            href="#projects" 
-            className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium transition-all hover:bg-primary/80"
-          >
-            View Projects
-          </a>
-          <a 
-            href="#contact" 
-            className="px-8 py-3 bg-transparent border border-primary text-primary rounded-lg font-medium transition-all hover:bg-primary/10"
-          >
-            Contact Me
-          </a>
+      <div className="absolute top-20 right-20 code-style opacity-30">{'//'}</div>
+      <div className="absolute bottom-20 right-20 code-style opacity-30">{'<//>'}</div>
+      
+      <div className="container mx-auto px-4 py-20 flex flex-col items-start text-left">
+        <div className="max-w-3xl">
+          <div className="mb-4 code-style opacity-70 slash-decoration">hello</div>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-tight leading-tight">
+            Hi,<br />
+            I'm <span className="text-accent">G</span><span className="text-primary">unit</span>,<br />
+            web developer
+          </h1>
+          <p className="text-sm md:text-base text-foreground/80 mb-8 code-style slash-decoration">
+            Developer & AI Enthusiast
+          </p>
+          
+          <div className="flex flex-wrap gap-4 mt-12">
+            <a 
+              href="#contact" 
+              className="px-6 py-2 border border-accent text-accent hover:bg-accent/10 transition-colors duration-300 text-sm font-medium"
+            >
+              Contact me!
+            </a>
+          </div>
         </div>
       </div>
       
