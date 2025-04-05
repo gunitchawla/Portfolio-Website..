@@ -34,9 +34,7 @@ const Footer = () => {
           
           <div className="text-foreground/60 text-sm border-t border-border/30 pt-8 w-full text-center">
             <p>&copy; {currentYear} Gunit Chawla. All rights reserved.</p>
-            <p className="mt-2">
-              Designed and built with <span className="text-red-500">❤</span>
-            </p>
+
           </div>
         </div>
       </div>
