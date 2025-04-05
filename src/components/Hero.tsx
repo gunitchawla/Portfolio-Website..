@@ -4,34 +4,27 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-16 bg-black">
-      {/* Code-like decorations */}
-      <div className="absolute top-20 left-20 code-style opacity-30">{'<html>'}</div>
-      <div className="absolute top-32 left-28 code-style opacity-30">{'<body>'}</div>
-      <div className="absolute bottom-32 left-28 code-style opacity-30">{'</body>'}</div>
-      <div className="absolute bottom-20 left-20 code-style opacity-30">{'</html>'}</div>
-      
-      <div className="absolute top-20 right-20 code-style opacity-30">{'//'}</div>
-      <div className="absolute bottom-20 right-20 code-style opacity-30">{'<//>'}</div>
-      
-      <div className="container mx-auto px-4 py-20 flex flex-col items-start text-left">
+    <section id="home" className="min-h-screen flex flex-col justify-center relative py-32">
+      <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-3xl">
-          <div className="mb-4 code-style opacity-70 slash-decoration">hello</div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-tight leading-tight">
-            Hi,<br />
-            I'm <span className="text-accent">G</span><span className="text-primary">unit</span>,<br />
-            web developer
+          <p className="font-mono text-primary mb-5 text-sm md:text-base">Hi, my name is</p>
+          <h1 className="text-4xl md:text-7xl font-bold mb-4 text-slate-lighter">
+            Gunit Chawla.
           </h1>
-          <p className="text-sm md:text-base text-foreground/80 mb-8 code-style slash-decoration">
-            Developer & AI Enthusiast
+          <h2 className="text-3xl md:text-6xl font-bold text-slate mb-6">
+            I build things for the web.
+          </h2>
+          <p className="text-slate mb-10 max-w-xl text-lg">
+            I'm a developer specialized in creating digital experiences with a focus on AI integration. 
+            Currently, I'm focused on building intelligent applications with OpenAI tools and APIs.
           </p>
           
-          <div className="flex flex-wrap gap-4 mt-12">
+          <div className="mt-10">
             <a 
-              href="#contact" 
-              className="px-6 py-2 border border-accent text-accent hover:bg-accent/10 transition-colors duration-300 text-sm font-medium"
+              href="#projects" 
+              className="btn-primary inline-block"
             >
-              Contact me!
+              Check out my projects!
             </a>
           </div>
         </div>
@@ -39,11 +32,9 @@ const Hero = () => {
       
       <a 
         href="#about" 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-foreground/60 hover:text-primary transition-colors duration-300 animate-fade-in"
-        style={{ animationDelay: '1.5s' }}
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-slate hover:text-primary transition-colors duration-300 animate-bounce"
       >
-        <span className="mb-2 text-sm">Scroll Down</span>
-        <ArrowDown className="animate-bounce" size={20} />
+        <ArrowDown className="h-6 w-6" />
       </a>
     </section>
   );

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, Linkedin, Github, Send } from 'lucide-react';
+import { Mail, Send } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,126 +13,80 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-card/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">Get In Touch</h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-purple-light to-accent rounded-full mx-auto mb-6"></div>
-          <p className="text-foreground/80 max-w-2xl mx-auto">
-            Feel free to reach out for collaborations or just a friendly hello
+    <section id="contact" className="py-20">
+      <div className="container mx-auto px-6 md:px-12">
+        <h2 className="section-heading">Contact Me</h2>
+        
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <p className="text-slate text-lg mb-6">
+            I'm currently looking for new opportunities. Whether you have a question or just want to say hi, 
+            my inbox is always open. I'll try my best to get back to you!
           </p>
+          
+          <a href="mailto:gunitchawla2604@gmail.com" className="btn-primary inline-flex items-center justify-center">
+            <Mail className="mr-2" size={18} />
+            <span>Say Hello</span>
+          </a>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-            
-            <div className="flex items-start space-x-4">
-              <div className="p-3 bg-secondary rounded-full">
-                <Mail className="text-primary" size={24} />
-              </div>
+        <div className="max-w-2xl mx-auto bg-secondary rounded-md p-8 mt-16">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <h4 className="text-lg font-medium">Email</h4>
-                <a href="mailto:contact@example.com" className="text-primary hover:underline">
-                 gunitchawla2604@gmail.com
-                </a>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4">
-              <div className="p-3 bg-secondary rounded-full">
-                <Linkedin className="text-primary" size={24} />
-              </div>
-              <div>
-                <h4 className="text-lg font-medium">LinkedIn</h4>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  linkedin.com/in/gunit-chawla
-                </a>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4">
-              <div className="p-3 bg-secondary rounded-full">
-                <Github className="text-primary" size={24} />
-              </div>
-              <div>
-                <h4 className="text-lg font-medium">GitHub</h4>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  github.com/gunit-chawla
-                </a>
-              </div>
-            </div>
-            
-            <div className="mt-12 p-6 bg-secondary rounded-lg">
-              <h4 className="text-lg font-medium mb-2">Current Status</h4>
-              <p className="text-foreground/80">
-                <span className="inline-block w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                Available for freelance projects
-              </p>
-            </div>
-          </div>
-          
-          {/* Contact Form */}
-          <div className="bg-card/70 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-purple/20">
-            <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                <label htmlFor="name" className="block font-mono text-sm text-slate-light mb-2">
                   Name
                 </label>
                 <Input
                   id="name"
                   placeholder="Your name"
-                  className="bg-secondary/50 border-purple/20"
+                  className="input-field"
                   required
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label htmlFor="email" className="block font-mono text-sm text-slate-light mb-2">
                   Email
                 </label>
                 <Input
                   id="email"
                   type="email"
                   placeholder="Your email"
-                  className="bg-secondary/50 border-purple/20"
+                  className="input-field"
                   required
                 />
               </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                  Subject
-                </label>
-                <Input
-                  id="subject"
-                  placeholder="Subject"
-                  className="bg-secondary/50 border-purple/20"
-                  required
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  placeholder="Your message"
-                  className="bg-secondary/50 border-purple/20 min-h-[120px]"
-                  required
-                />
-              </div>
-              
-              <Button type="submit" className="w-full bg-primary hover:bg-primary/80">
-                <Send className="mr-2" size={18} />
-                Send Message
-              </Button>
-            </form>
-          </div>
+            </div>
+            
+            <div>
+              <label htmlFor="subject" className="block font-mono text-sm text-slate-light mb-2">
+                Subject
+              </label>
+              <Input
+                id="subject"
+                placeholder="Subject"
+                className="input-field"
+                required
+              />
+            </div>
+            
+            <div>
+              <label htmlFor="message" className="block font-mono text-sm text-slate-light mb-2">
+                Message
+              </label>
+              <Textarea
+                id="message"
+                placeholder="Your message"
+                className="input-field min-h-[150px]"
+                required
+              />
+            </div>
+            
+            <Button type="submit" className="btn-primary w-full">
+              <Send className="mr-2" size={18} />
+              Send Message
+            </Button>
+          </form>
         </div>
       </div>
     </section>
